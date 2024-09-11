@@ -1,30 +1,20 @@
 import seriesdata from "../api/series.json";
+import { Seriescard } from "./list";
 
 export const Netflix=()=>{
     return (
-      <div>
+      
         <ul>
           {
-            seriesdata.map((currEle)=>{
-              return (  <li key={currEle.id}>
-                <img src={currEle.img_url}
-                width="40%"
-                height="40%"/>
-                <h2>Movie: {currEle.name} </h2>
-                <h3>Rating: {currEle.rating}</h3>
-                <p>Summary:{currEle.description}</p>
-                <a href={currEle.watch_url} target="_blank">
-                  <button>Watch Now</button>
-                </a>
-                </li>);
+            seriesdata.map((currEle)=>(
+              <Seriescard key={currEle.id} currEle = {currEle}/>
   
-             })
+            ))
           }
          
         </ul>
-      </div>
-    )
-  }
+    );
+  };
 
 //   export default Netflix;
 
