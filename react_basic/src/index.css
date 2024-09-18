@@ -81,7 +81,7 @@ display: grid;
 gap: 9.6rem;
 }
 
-.grid-two--cols {
+.grid-two-cols {
 grid-template-columns: repeat(2, 1fr); 
 }
 
