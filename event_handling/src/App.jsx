@@ -2,6 +2,7 @@
 import { EventPropagation } from './components/EventPropagation'
 import { EventsProps } from './components/EventsProps'
 import {States} from './components/hooks/States'
+import { DerivedState}  from './components/derivedState/derivedState'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
       {/* <Eventhandling/> */}
       {/* <EventsProps/> */}
       {/* <EventPropagation/> */}
-      <States/>
+      {/* <States/> */}
+      <DerivedState/>
     </section>
   )
 }
