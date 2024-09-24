@@ -3,6 +3,7 @@ import { EventPropagation } from './components/EventPropagation'
 import { EventsProps } from './components/EventsProps'
 import {States} from './components/hooks/States'
 import { DerivedState}  from './components/derivedState/derivedState'
+import { LiftingState } from './components/liftStateUp'
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       {/* <EventsProps/> */}
       {/* <EventPropagation/> */}
       {/* <States/> */}
-      <DerivedState/>
+      {/* <DerivedState/> */}
+      <LiftingState/>
     </section>
   )
 }
