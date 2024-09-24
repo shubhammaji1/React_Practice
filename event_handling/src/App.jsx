@@ -4,6 +4,7 @@ import { EventsProps } from './components/EventsProps'
 import {States} from './components/hooks/States'
 import { DerivedState}  from './components/derivedState/derivedState'
 import { LiftingState } from './components/liftStateUp'
+import { ToggleSwitch } from './components/toggleSwitch/toggleSwitch'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       {/* <EventPropagation/> */}
       {/* <States/> */}
       {/* <DerivedState/> */}
-      <LiftingState/>
+      {/* <LiftingState/> */}
+      <ToggleSwitch/>
     </section>
   )
 }
