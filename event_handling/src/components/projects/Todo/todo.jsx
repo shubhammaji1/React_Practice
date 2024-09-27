@@ -1,22 +1,20 @@
 import { useEffect, useState } from "react";
 import "./todo.css"
 import { MdCheck, MdDeleteForever } from "react-icons/md";
+import { TodoForm } from "./TodoForm";
 export const Todo=()=>{
-    const [inputValue, setInputValue] = useState("");
+   
     const [task,setTask] = useState([]);
     const [dateTime,setDateTime ] = useState("");
 
 
-    const handleInputChange = (value)=>{
-            setInputValue(value);
-    };
-    const handleFormSubmit =(event)=>{
-        event.preventDefault();
+   
+    const handleFormSubmit =(inputValue)=>{
+
         if(!inputValue) return;
         if(task.includes(inputValue)) return;
         setTask((prevtask)=>[...prevtask,inputValue]);
-        setInputValue("")
-
+        
     };
     useEffect(()=>{
         const interval= setInterval(() => {
@@ -48,22 +46,7 @@ export const Todo=()=>{
                 <h1>Todo List</h1>
                 <h3 className="date-time">{dateTime}</h3>
             </header>
-        <section className="form" >
-            <form onSubmit={handleFormSubmit}>
-                <div>
-                <input 
-                type="text" 
-                className="todo-input" 
-                autoComplete="off" 
-                value={inputValue} 
-                onChange={(event)=>handleInputChange(event.target.value)}
-                />
-                </div>
-                <div>
-                <button type="submit" className="todo-btn">Add Task</button>
-                </div>
-            </form>
-        </section>
+        <TodoForm onAddTodo ={handleFormSubmit}/>
         <section className="myUnOrdList">
             <ul>
                 {
