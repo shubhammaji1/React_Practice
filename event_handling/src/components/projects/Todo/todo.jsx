@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./todo.css"
 import { MdCheck, MdDeleteForever } from "react-icons/md";
 export const Todo=()=>{
     const [inputValue, setInputValue] = useState("");
     const [task,setTask] = useState([]);
+    const [dateTime,setDateTime ] = useState("");
+
+
     const handleInputChange = (value)=>{
             setInputValue(value);
     };
@@ -15,10 +18,35 @@ export const Todo=()=>{
         setInputValue("")
 
     };
+    useEffect(()=>{
+        const interval= setInterval(() => {
+            const now = new Date();
+            const getFormatedDate = now.toLocaleDateString();
+            const getFormatedTime = now.toLocaleTimeString();
+            setDateTime(`${getFormatedDate}-${getFormatedTime}`);
+        },1000);
+
+        return ()=> clearInterval(interval);
+
+    });
+    //  Delete Element from list
+    
+    const handleDeleteElement =(value)=>{
+        const updatetask = task.filter((curr)=>curr !== value);
+        setTask(updatetask);
+    };
+
+    const handleClearAll =()=>{
+        setTask([]);
+    }
+    
+
+  
     return(
         <section className="todo-container">
             <header>    
                 <h1>Todo List</h1>
+                <h3 className="date-time">{dateTime}</h3>
             </header>
         <section className="form" >
             <form onSubmit={handleFormSubmit}>
@@ -45,7 +73,7 @@ export const Todo=()=>{
                             <button className="check-btn">
                                 <MdCheck/>
                                 </button>
-                            <button className="delete-btn">
+                            <button onClick={()=>handleDeleteElement(curr)} className="delete-btn">
                             <MdDeleteForever/>
                             </button>
                         </li>
@@ -54,6 +82,9 @@ export const Todo=()=>{
                 }
 
             </ul>
+        </section>
+        <section className="clear-btn" onClick={handleClearAll}>
+            Clear All
         </section>
 
 
