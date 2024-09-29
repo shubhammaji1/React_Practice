@@ -6,6 +6,8 @@ import { DerivedState}  from './components/derivedState/derivedState'
 import { LiftingState } from './components/liftStateUp'
 import { ToggleSwitch } from './components/projects/toggleSwitch/toggleSwitch'
 import { Todo } from './components/projects/Todo/todo'
+import { Counter } from './components/hooks/useState'
+
 
 function App() {
 
@@ -18,7 +20,8 @@ function App() {
       {/* <DerivedState/> */}
       {/* <LiftingState/> */}
       {/* <ToggleSwitch/> */}
-      <Todo/>
+      {/* <Todo/> */}
+      <Counter/>
     </section>
   )
 }
