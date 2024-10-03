@@ -7,6 +7,7 @@ import { LiftingState } from './components/liftStateUp'
 import { ToggleSwitch } from './components/projects/toggleSwitch/toggleSwitch'
 import { Todo } from './components/projects/Todo/todo'
 import { Counter } from './components/hooks/useState'
+import { RegistrationForm } from './components/hooks/useState/registration'
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       {/* <LiftingState/> */}
       {/* <ToggleSwitch/> */}
       {/* <Todo/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <RegistrationForm/>
     </section>
   )
 }
