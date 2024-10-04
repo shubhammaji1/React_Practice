@@ -8,6 +8,7 @@ import { ToggleSwitch } from './components/projects/toggleSwitch/toggleSwitch'
 import { Todo } from './components/projects/Todo/todo'
 import { Counter } from './components/hooks/useState'
 import { RegistrationForm } from './components/hooks/useState/registration'
+import { LoginForm } from './components/hooks/useState/Login'
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       {/* <ToggleSwitch/> */}
       {/* <Todo/> */}
       {/* <Counter/> */}
-      <RegistrationForm/>
+      {/* <RegistrationForm/> */}
+      <LoginForm/>
     </section>
   )
 }
