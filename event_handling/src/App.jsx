@@ -9,6 +9,9 @@ import { Todo } from './components/projects/Todo/todo'
 import { Counter } from './components/hooks/useState'
 import { RegistrationForm } from './components/hooks/useState/registration'
 import { LoginForm } from './components/hooks/useState/Login'
+import { ReactUseEffect } from './components/hooks/useEffect'
+import { Challenge } from './components/hooks/useEffect/effectChallenge'
+import { Cleanup } from './components/hooks/useEffect/cleanUp'
 
 
 function App() {
@@ -25,7 +28,10 @@ function App() {
       {/* <Todo/> */}
       {/* <Counter/> */}
       {/* <RegistrationForm/> */}
-      <LoginForm/>
+      {/* <LoginForm/> */}
+      {/* <ReactUseEffect/> */}
+      {/* <Challenge/> */}
+      <Cleanup/>
     </section>
   )
 }
