@@ -12,6 +12,7 @@ import { LoginForm } from './components/hooks/useState/Login'
 import { ReactUseEffect } from './components/hooks/useEffect'
 import { Challenge } from './components/hooks/useEffect/effectChallenge'
 import { Cleanup } from './components/hooks/useEffect/cleanUp'
+import { HowNotToFetchApi } from './components/hooks/useEffect/HowNotToFetchApi'
 
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       {/* <LoginForm/> */}
       {/* <ReactUseEffect/> */}
       {/* <Challenge/> */}
-      <Cleanup/>
+      {/* <Cleanup/> */}
+      <HowNotToFetchApi/>
     </section>
   )
 }
