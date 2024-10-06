@@ -13,6 +13,8 @@ import { ReactUseEffect } from './components/hooks/useEffect'
 import { Challenge } from './components/hooks/useEffect/effectChallenge'
 import { Cleanup } from './components/hooks/useEffect/cleanUp'
 import { HowNotToFetchApi } from './components/hooks/useEffect/HowNotToFetchApi'
+import { UseRef } from './components/hooks/useRef'
+import { ForwardRef } from './components/hooks/useRef/ForwardRef'
 
 
 function App() {
@@ -33,7 +35,9 @@ function App() {
       {/* <ReactUseEffect/> */}
       {/* <Challenge/> */}
       {/* <Cleanup/> */}
-      <HowNotToFetchApi/>
+      {/* <HowNotToFetchApi/> */}
+      {/* <UseRef/> */}
+      <ForwardRef/>
     </section>
   )
 }
