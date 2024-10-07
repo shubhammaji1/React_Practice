@@ -16,12 +16,15 @@ import { HowNotToFetchApi } from './components/hooks/useEffect/HowNotToFetchApi'
 import { UseRef } from './components/hooks/useRef'
 import { ForwardRef } from './components/hooks/useRef/ForwardRef'
 import { UseId } from './components/hooks/useId'
+import { ParentComponent } from './components/propDrilling'
+import { BioProvider } from './components/hooks/ContextApi'
+import { Home } from './components/hooks/ContextApi/home'
 
 
 function App() {
 
   return (
-    <section className='container'>
+    <section>
       {/* <Eventhandling/> */}
       {/* <EventsProps/> */}
       {/* <EventPropagation/> */}
@@ -39,7 +42,11 @@ function App() {
       {/* <HowNotToFetchApi/> */}
       {/* <UseRef/> */}
       {/* <ForwardRef/> */}
-      <UseId/>
+      {/* <UseId/> */}
+      {/* <ParentComponent/> */}
+      <BioProvider>
+        <Home/>
+      </BioProvider>
     </section>
   )
 }
