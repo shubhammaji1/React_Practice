@@ -6,7 +6,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
 
   const handleToggleTheme = () => {
-    return setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    return setTheme((prevTheme) => (prevTheme == "dark" ? "light" : "dark"));
   };
 
   return (
@@ -19,6 +19,7 @@ export const ThemeProvider = ({ children }) => {
 // creating a component
 export const DarkLight = () => {
   const { theme, handleToggleTheme } = useContext(ThemeContext);
+//   const { theme, handleToggleTheme } = use(ThemeContext);
 
   return (
     <div
