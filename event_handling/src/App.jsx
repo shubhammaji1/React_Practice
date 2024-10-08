@@ -19,6 +19,7 @@ import { UseId } from './components/hooks/useId'
 import { ParentComponent } from './components/propDrilling'
 import { BioProvider } from './components/hooks/ContextApi'
 import { Home } from './components/hooks/ContextApi/home'
+import { DarkLight, ThemeProvider } from './components/hooks/ContextApi/DarkLight'
 
 
 function App() {
@@ -44,9 +45,12 @@ function App() {
       {/* <ForwardRef/> */}
       {/* <UseId/> */}
       {/* <ParentComponent/> */}
-      <BioProvider>
+      {/* <BioProvider>
         <Home/>
-      </BioProvider>
+      </BioProvider> */}
+      <ThemeProvider>
+        <DarkLight/>
+      </ThemeProvider>
     </section>
   )
 }
