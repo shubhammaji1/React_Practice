@@ -20,6 +20,7 @@ import { ParentComponent } from './components/propDrilling'
 import { BioProvider } from './components/hooks/ContextApi'
 import { Home } from './components/hooks/ContextApi/home'
 import { DarkLight, ThemeProvider } from './components/hooks/ContextApi/DarkLight'
+import { ReducerComp } from './components/hooks/useReducer'
 
 
 function App() {
@@ -48,9 +49,10 @@ function App() {
       {/* <BioProvider>
         <Home/>
       </BioProvider> */}
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <DarkLight/>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      <ReducerComp/>
     </section>
   )
 }
