@@ -1,24 +1,50 @@
-import { useReducer } from "react"
+import { useReducer } from "react";
 
-export const ReducerComp =()=>{
+export const ReducerComp = () => {
+  const initialState = {
+    count: 0,
+    inc: 2,
+    dec: 2,
+  };
 
-    const reducer =(state,action)=>{
-        if(action.type == "INCREMENT"){
-            return state+1;
-        }
-        if(action.type == "DECREMENT"){
-            return state-1;
-        }
-    };
+  const reducer = (state, action) => {
+    console.log(state, action);
+    // if (action.type === "INCREMENT") {
+    //   return state + 1;
+    // }
+    // if (action.type === "DECREMENT") {
+    //   return state - 1;
+    // }
+    // if (action.type === "RESET") {
+    //   return (state = 0);
+    // }
 
-    const [count,dispatch] = useReducer(reducer,0);
+    switch (action.type) {
+      case "INCREMENT":
+        return {
+          ...state,
+          count: state.count + 2,
+        };
 
-    return(
-        <div>
-            <h1 style={{ marginTop:"400px", width:"300px"}}>{count}</h1>
-            <button onClick={()=> dispatch({type:"INCREMENT"})} style={{backgroundColor : "red", marginTop:"400px", width:"300px"}} >Increment</button>
-            <button onClick={()=> dispatch({type:"DECREMENT"})} style={{marginTop:"400px", width:"300px"}}>Decrement</button>
-        </div>
-        
-    );
-}
+      case "DECREMENT":
+        return { ...state, count: state.count - 2 };
+
+      case "RESET":
+        return { ...state, count: 0 };
+
+      default:
+        return state;
+    }
+  };
+
+  //   const [count, setCount] = useState(0);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <div>
+      <h1>{state.count}</h1>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
+      <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+    </div>
+  );
+};
