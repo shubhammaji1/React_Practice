@@ -21,6 +21,8 @@ import { BioProvider } from './components/hooks/ContextApi'
 import { Home } from './components/hooks/ContextApi/home'
 import { DarkLight, ThemeProvider } from './components/hooks/ContextApi/DarkLight'
 import { ReducerComp } from './components/hooks/useReducer'
+import { ReactMemo } from './components/hooks/useMemo/ReactMemo'
+import MemoParentComponent from './components/hooks/useMemo/UseMemo'
 
 
 function App() {
@@ -52,7 +54,9 @@ function App() {
       {/* <ThemeProvider>
         <DarkLight/>
       </ThemeProvider> */}
-      <ReducerComp/>
+      {/* <ReducerComp/> */}
+      {/* <ReactMemo/> */}
+      <MemoParentComponent/>
     </section>
   )
 }
