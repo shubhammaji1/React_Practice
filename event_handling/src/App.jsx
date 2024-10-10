@@ -23,6 +23,7 @@ import { DarkLight, ThemeProvider } from './components/hooks/ContextApi/DarkLigh
 import { ReducerComp } from './components/hooks/useReducer'
 import { ReactMemo } from './components/hooks/useMemo/ReactMemo'
 import MemoParentComponent from './components/hooks/useMemo/UseMemo'
+import UseCallback from './components/hooks/useCallback/UseCallback'
 
 
 function App() {
@@ -56,7 +57,8 @@ function App() {
       </ThemeProvider> */}
       {/* <ReducerComp/> */}
       {/* <ReactMemo/> */}
-      <MemoParentComponent/>
+      {/* <MemoParentComponent/> */}
+      <UseCallback/>
     </section>
   )
 }
