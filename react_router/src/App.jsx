@@ -5,6 +5,8 @@ import { About } from "./pages/about";
 import { Contact } from "./pages/contact";
 import AppLayout from "./components/layout/AppLayout";
 import "./App.css";
+import { ErrorPage } from "./pages/ErrorPage";
+import { getMoviesData } from "./api/GetAPIData";
 
 const App = ()=>{
 
@@ -12,6 +14,7 @@ const App = ()=>{
     {
       path: "/",
       element:<AppLayout/>,
+      errorElement : <ErrorPage/>,
       children:[
         {
           path:"/",
@@ -23,7 +26,8 @@ const App = ()=>{
         },
         {
           path:"/movie",
-          element:<Movie/>
+          element:<Movie/>,
+          loader: getMoviesData,
         },
         {
           path:"/contact",
