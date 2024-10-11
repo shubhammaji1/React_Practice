@@ -4,6 +4,7 @@ import {Home} from "./pages/Home";
 import { About } from "./pages/about";
 import { Contact } from "./pages/contact";
 import AppLayout from "./components/layout/AppLayout";
+import "./App.css";
 
 const App = ()=>{
 
