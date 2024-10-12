@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider  } from "react-router-dom";
 import { Movie } from "./pages/movie";
 import {Home} from "./pages/Home";
 import { About } from "./pages/about";
-import { Contact } from "./pages/contact";
+import { Contact, contactData } from "./pages/contact";
 import AppLayout from "./components/layout/AppLayout";
 import "./App.css";
 import { ErrorPage } from "./pages/ErrorPage";
@@ -39,7 +39,8 @@ const App = ()=>{
         },
         {
           path:"/contact",
-          element:<Contact/>
+          element:<Contact/>,
+          action: contactData,
         },
 
       ]

@@ -22,14 +22,14 @@ export const MovieDetails = () => {
   } = movieData;
 
   // 192min
-  const totalMinutes = Runtime.replace("min", "");
-  const hours = Math.floor(totalMinutes / 60); // Calculate the number of hours
-  const minutes = totalMinutes % 60; // Calculate the remaining minutes
+  // const totalMinutes = Runtime.replace("min", "");
+  // const hours = Math.floor(totalMinutes / 60); // Calculate the number of hours
+  // const minutes = totalMinutes % 60; // Calculate the remaining minutes
 
-  console.log(hours, minutes);
+  // console.log(hours, minutes);
 
-  const formattedTime = `${hours}hr ${minutes}min`;
-  console.log(formattedTime);
+  // const formattedTime = `${hours}hr ${minutes}min`;
+  // console.log(formattedTime);
 
   return (
     <li className="hero-container hero-movie-container">
@@ -60,7 +60,7 @@ export const MovieDetails = () => {
                 <span className="icons icons-grey">
                   <i className="fas fa-clock"></i>
                 </span>
-                {formattedTime}
+                {/* {formattedTime} */}
               </p>
               <p className="movie__detail">
                 <span className="icons icons-yellow">
